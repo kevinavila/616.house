@@ -1,0 +1,22 @@
+{
+  "author": "616",
+  "name": "616.house",
+  "description": "Brand",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-connect": "^5.7.0",
+    "gulp-handlebars": "^5.0.2",
+    "gulp-wrap": "^0.15.0",
+    "gulp-declare": "^0.3.0",
+    "del": "^3.0.0",
+    "sass": "^1.57.1"
+  }
+}

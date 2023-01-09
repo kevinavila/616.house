@@ -1,0 +1,87 @@
+/* Settings
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$spacing0: 0;
+$spacing1: 0.5;
+$spacing2: 1;
+$spacing3: 2;
+$spacing4: 4;
+$spacing5: 8;
+$spacing6: 16;
+
+$marginValues:  $spacing0, $spacing1, $spacing2, $spacing3, $spacing4, $spacing5, $spacing6;
+$paddingValues: $spacing0, $spacing1, $spacing2, $spacing3, $spacing4, $spacing5, $spacing6;
+
+$remFactor: 1.6;
+
+/* Elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: black;
+}
+
+/* 616
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.center-text {
+	text-align: center;
+}
+
+.room-tile {
+  height: 100vh;
+  width: 100%;
+  float: left;
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
+}
+
+.room-number {
+  font-size: 50rem;
+}
+
+/* Padding
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@for $i from 1 through length($paddingValues) {
+  .p#{($i - 1)}  { padding:        nth($paddingValues, $i) + rem; }
+  .pt#{($i - 1)} { padding-top:    nth($paddingValues, $i) + rem; }
+  .pb#{($i - 1)} { padding-bottom: nth($paddingValues, $i) + rem; }
+  .pl#{($i - 1)} { padding-left:   nth($paddingValues, $i) + rem; }
+  .pr#{($i - 1)} { padding-right:  nth($paddingValues, $i) + rem; }
+  .px#{($i - 1)} { padding-left:   nth($paddingValues, $i) + rem; padding-right:  nth($paddingValues, $i) + rem; }
+  .py#{($i - 1)} { padding-top:    nth($paddingValues, $i) + rem; padding-bottom: nth($paddingValues, $i) + rem; }
+}
+
+/* Margin
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@for $i from 1 through length($marginValues) {
+  .m#{($i - 1)}   { margin: nth($marginValues, $i) + rem; }
+}
+
+@for $i from 1 through length($marginValues) {
+  .mt#{($i - 1)} { margin-top:    nth($marginValues, $i) + rem; }
+  .mb#{($i - 1)} { margin-bottom: nth($marginValues, $i) + rem; }
+  .ml#{($i - 1)} { margin-left:   nth($marginValues, $i) + rem; }
+  .mr#{($i - 1)} { margin-right:  nth($marginValues, $i) + rem; }
+  .mx#{($i - 1)} { margin-left:   nth($marginValues, $i) + rem; margin-right:  nth($marginValues, $i) + rem; }
+  .my#{($i - 1)} { margin-top:    nth($marginValues, $i) + rem; margin-bottom: nth($marginValues, $i) + rem; }
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.underline {
+  text-decoration: underline;
+}
