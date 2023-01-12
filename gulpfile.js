@@ -1,17 +1,19 @@
 const { src, dest, watch, series, parallel } = require('gulp')
 
-const concat          = require('gulp-concat')
-const uglify        = require('gulp-uglify')
-const htmlmin        = require('gulp-htmlmin')
-const sass         = require('gulp-sass')(require('sass'))
-const imagemin     = require('gulp-imagemin')
-const sourcemaps     = require('gulp-sourcemaps')
-const connect       = require('gulp-connect')
-const handlebars     = require('gulp-handlebars')
-const wrap          = require('gulp-wrap')
-const declare         = require('gulp-declare')
-const cache           = require('gulp-cache')
-const del             = require('del')
+const concat     = require('gulp-concat')
+const uglify     = require('gulp-uglify')
+const htmlmin    = require('gulp-htmlmin')
+const sass       = require('gulp-sass')(require('sass'))
+const imagemin   = require('gulp-imagemin')
+const sourcemaps = require('gulp-sourcemaps')
+const connect    = require('gulp-connect')
+const handlebars = require('gulp-handlebars')
+const wrap       = require('gulp-wrap')
+const declare    = require('gulp-declare')
+const cache      = require('gulp-cache')
+const del        = require('del')
+const path       = require('path')
+const merge      = require('merge-stream')
 
 // Tasks 
 function connectDev(cb) {
@@ -77,13 +79,29 @@ function html(cb) {
 }
 
 function templates(cb) {
-  src('app/templates/*.handlebars')
+  let partials = src('app/templates/partials/*.handlebars')
+    .pipe(handlebars())
+    .pipe(wrap('Handlebars.registerPartial(<%= processPartialName(file.relative) %>, Handlebars.template(<%= contents %>));', {}, {
+      imports: {
+        processPartialName: function(fileName) {
+          // Strip the extension and the underscore
+          // Escape the output with JSON.stringify
+          return JSON.stringify(path.basename(fileName, '.js').substr(1));
+        }
+      }
+    }))
+
+
+  let templates = src('app/templates/*.handlebars')
     .pipe(handlebars())
     .pipe(wrap('Handlebars.template(<%= contents %>)'))
     .pipe(declare({
       namespace: 'house.templates',
       noRedeclare: true, // Avoid duplicate declarations
     }))
+
+
+  merge(partials, templates)
     .pipe(concat('templates.js'))
     .pipe(dest('dist/js'))
     .pipe(connect.reload())

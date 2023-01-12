@@ -26,6 +26,11 @@ body {
   background: black;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* 616
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -44,6 +49,18 @@ body {
 
 .room-number {
   font-size: 50rem;
+}
+
+.entry-tile {
+  width: 20%;
+  float: left;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /* Padding
