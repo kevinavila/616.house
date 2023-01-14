@@ -28,7 +28,7 @@ function connectDev(cb) {
 function watchFiles(cb) {
   watch('app/scss/*.scss', scss)
   watch('app/*.html', html)
-  watch('app/templates/*.handlebars', templates)
+  watch('app/templates/**/*.handlebars', templates)
   watch('app/js/*.js', js)
   cb()
 }
