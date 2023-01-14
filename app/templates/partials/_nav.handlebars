@@ -1,8 +1,14 @@
 <div class="nav">
 	<div class="row">
 		<div class="column pl2">
-			{{#if leftNavItem}}
-				<p>{{ leftNavItem }}</p>
+			{{#if leftNavItem }}
+				{{#if leftNavUrl }}
+				<a href="#{{ leftNavUrl }}" data-goto="{{ leftNavUrl }}">
+					<p class="bold-text">{{ leftNavItem }}</p>
+				</a>
+				{{else}}
+					<p>{{ leftNavItem }}</p>
+				{{/if}}
 			{{/if}}
 		</div>
 		<div class="column center-text pl2">
