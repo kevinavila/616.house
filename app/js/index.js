@@ -16,13 +16,14 @@ window.onload = (event) => {
 
 function loadPage() {
 	// Grab hash and load appropriate template
-	let hash = window.location.hash.slice(1).toLowerCase() || home;
-	let template = window.house.templates[hash];
+	var hash = window.location.hash.slice(1).toLowerCase() || home
+	hash = hash.replace('-', '_')
+	let template = window.house.templates[hash]
 	
 	// Remove hidden class on elements
 	$('#content').removeClass('hidden')
 
 	// Set template HTML on content div
-	let contentDiv = $('#content');
-	contentDiv.html(template);
+	let contentDiv = $('#content')
+	contentDiv.html(template)
 }

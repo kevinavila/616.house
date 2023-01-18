@@ -16,6 +16,7 @@ $remFactor: 1.6;
 
 $black: #121111;
 $white: #bbb7af;
+$red: #c61d24;
 
 /* Elements
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -34,7 +35,7 @@ a {
   color: inherit;
 }
 
-p {
+h1, h2, h3, h4, h5, h6, p {
   color: $white;
 }
 
@@ -99,6 +100,22 @@ p {
   .column {
     width: 33.3%;
   }
+}
+
+.tag {
+  border-radius: 20px;
+  width: fit-content;
+  border-style: solid;
+  border-width: 2px;
+  opacity: 50%;
+}
+
+.party-title {
+  font-size: 1.7rem;
+}
+
+.display-inline {
+  display: inline;
 }
 
 /* Padding
