@@ -1,42 +1,6 @@
-<!-- Mobile -->
-<div class="hide-gt-mobile">
-	<div class="nav">
-		<div class="row">
-			<div class="column pl2">
-				{{#if leftNavItem }}
-					{{#if leftNavUrl }}
-						<a href="#{{ leftNavUrl }}" data-goto="{{ leftNavUrl }}">
-							<p class="bold-text">{{ leftNavItem }}</p>
-						</a>
-					{{else}}
-						<p>{{ leftNavItem }}</p>
-					{{/if}}
-				{{/if}}
-			</div>
-			<div class="column center-text pl2">
-				{{#if centerNavItem}}
-					{{#if centerNavUrl}}
-						<a href="#{{ centerNavUrl }}" data-goto="{{ centerNavUrl }}">
-							<p class="bold-text">{{ centerNavItem }}</p>
-						</a>
-					{{else}}
-						<p>{{ centerNavItem }}</p>
-					{{/if}}
-				{{/if}}
-			</div>
-			<div class="column right-text pr2">
-				{{#if rightNavItem}}
-					<p>{{ rightNavItem }}</p>
-				{{/if}}
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Desktop -->
-<div class="hide-lt-mobile">
-	<div class="row pt6">
-		<div class="one-third column pl2">
+<div class="nav">
+	<div class="row">
+		<div class="column pl2">
 			{{#if leftNavItem }}
 				{{#if leftNavUrl }}
 					<a href="#{{ leftNavUrl }}" data-goto="{{ leftNavUrl }}">
@@ -47,7 +11,7 @@
 				{{/if}}
 			{{/if}}
 		</div>
-		<div class="one-third column center-text pl2">
+		<div class="column center-text pl2">
 			{{#if centerNavItem}}
 				{{#if centerNavUrl}}
 					<a href="#{{ centerNavUrl }}" data-goto="{{ centerNavUrl }}">
@@ -58,7 +22,7 @@
 				{{/if}}
 			{{/if}}
 		</div>
-		<div class="one-third column right-text pr2">
+		<div class="column right-text pr2">
 			{{#if rightNavItem}}
 				<p>{{ rightNavItem }}</p>
 			{{/if}}
