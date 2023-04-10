@@ -17,7 +17,7 @@ window.onload = (event) => {
 function loadPage() {
 	// Grab hash and load appropriate template
 	var hash = window.location.hash.slice(1).toLowerCase() || home
-	hash = hash.replace('-', '_')
+	hash = hash.replaceAll('-', '_')
 	let template = window.house.templates[hash]
 	
 	// Remove hidden class on elements
