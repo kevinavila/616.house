@@ -15,7 +15,7 @@ $paddingValues: $spacing0, $spacing1, $spacing2, $spacing3, $spacing4, $spacing5
 $remFactor: 1.6;
 
 $black: #121111;
-$white: #bbb7af;
+$gray: #bbb7af;
 $red: #c61d24;
 
 /* Elements
@@ -37,7 +37,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  color: $white;
+  color: $gray;
 }
 
 /* 616
@@ -120,6 +120,14 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
 /* Padding
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -170,4 +178,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .organizer {
   color: #633434;
+}
+
+.street {
+  color: $gray;
 }
