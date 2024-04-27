@@ -16,7 +16,9 @@ $remFactor: 1.6;
 
 $black: #121111;
 $gray: #bbb7af;
-$red: #c61d24;
+$red1: #ff9c9c;
+$red2: #b56464;
+$red3: #633434;
 
 /* Elements
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -65,19 +67,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .six-top {
-  background-image: url('../img/6_top.png');
+  background-image: url('../img/6_top.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .one {
-  background-image: url('../img/1.png');
+  background-image: url('../img/1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .six-bottom {
-  background-image: url('../img/6_bottom.png');
+  background-image: url('../img/6_bottom.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -169,15 +171,15 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .dev {
-  color: #ff9c9c;
+  color: $red1;
 }
 
 .curator {
-  color: #b56464;
+  color: $red2;
 }
 
 .organizer {
-  color: #633434;
+  color: $red3;
 }
 
 .street {
