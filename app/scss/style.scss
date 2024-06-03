@@ -130,6 +130,10 @@ h1, h2, h3, h4, h5, h6, p {
   float: right;
 }
 
+.grayscale {
+  filter: grayscale(100%);
+}
+
 /* Padding
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
