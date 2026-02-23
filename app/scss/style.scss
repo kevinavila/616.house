@@ -17,8 +17,10 @@ $remFactor: 1.6;
 $black: #121111;
 $gray: #bbb7af;
 $red1: #ff9c9c;
-$red2: #b56464;
-$red3: #633434;
+$red2: #e07b7b;
+$red3: #b56464;
+$red4: #8f4a4a;
+$red5: #633434;
 
 /* Elements
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -190,8 +192,16 @@ h1, h2, h3, h4, h5, h6, p {
   color: $red2;
 }
 
-.organizer {
+.artist {
   color: $red3;
+}
+
+.poet {
+  color: $red4;
+}
+
+.organizer {
+  color: $red5;
 }
 
 .street {
